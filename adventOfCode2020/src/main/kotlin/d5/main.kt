@@ -20,7 +20,7 @@ fun part2() {
 }
 
 fun getOccupiedSeats(): List<Int> {
-    val lines = FileReader.readFile("/input-day5")
+    val lines = FileReader.readFile("/d5/input")
     return lines.map {
         val row = findSeat(0, 127, it.substring(0, 7).toMutableList())
         val seat = findSeat(0, 7, it.substring(7, it.length).toMutableList())

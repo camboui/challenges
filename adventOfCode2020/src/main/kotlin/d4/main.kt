@@ -26,7 +26,7 @@ fun main() {
 }
 
 fun validatePassports(requiredPassportRules: Map<String, Regex>) {
-    val lines = FileReader.readFile("/input-day4")
+    val lines = FileReader.readFile("/d4/input")
     val currentFields = mutableListOf<String>()
     var countValid = 0
     lines.forEach { line ->

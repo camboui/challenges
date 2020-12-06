@@ -8,13 +8,13 @@ fun main() {
 }
 
 fun part1() {
-    val lines = FileReader.readFile("/input-day3")
+    val lines = FileReader.readFile("/d3/input")
     val treeCount = countTrees(lines, 3, 1)
     println("Trees : $treeCount")
 }
 
 fun part2() {
-    val lines = FileReader.readFile("/input-day3")
+    val lines = FileReader.readFile("/d3/input")
     val treeCounts = listOf(
         countTrees(lines, 1, 1),
         countTrees(lines, 3, 1),

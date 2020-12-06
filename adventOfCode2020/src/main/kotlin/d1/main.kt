@@ -8,7 +8,7 @@ fun main() {
 
 fun findXNumberSumEqual2020(x: Int) {
 
-    val lines = FileReader.readFile("/input-day1").map(String::toInt)
+    val lines = FileReader.readFile("/d1/input").map(String::toInt)
 
     val result = findXNumberSumEqualY(x, 2020, mutableListOf(), lines, mutableListOf())
     val printedResult = result.first()

@@ -7,7 +7,7 @@ fun main() {
 
 fun part1() {
 
-    val lines = FileReader.readFile("/input-day2")
+    val lines = FileReader.readFile("/d2/input")
     val result = lines.filter { line ->
         val (min, max, char, pwd) = line.replace(":", "").replace("-", " ").split(" ")
         val count = pwd.count { c -> c == char.first() }
@@ -19,7 +19,7 @@ fun part1() {
 
 fun part2() {
 
-    val lines = FileReader.readFile("/input-day2")
+    val lines = FileReader.readFile("/d2/input")
 
     val result = lines.filter { line ->
         val (min, max, char, pwd) = line.replace(":", "").replace("-", " ").split(" ")
