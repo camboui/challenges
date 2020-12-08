@@ -5,13 +5,11 @@ val bagList = hashMapOf<String, Bag>()
 fun main() {
     val lines = FileReader.readFile("/d7/input")
     lines.forEach {
-        val splittedRule = it.split(Regex("contain|bag.(s|,|\\.)?")).map(String::trim).filter(String::isNotBlank)
-
-        val bagColor = splittedRule[0]
-
+        val splitRule = it.split(Regex("contain|bag.(s|,|\\.)?")).map(String::trim).filter(String::isNotBlank)
+        val bagColor = splitRule[0]
         val bag = Bag(bagColor)
-        if (!splittedRule[1].contains("no other")) {
-            splittedRule.subList(1, splittedRule.size).forEach { content ->
+        if (!splitRule[1].contains("no other")) {
+            splitRule.subList(1, splitRule.size).forEach { content ->
                 val (count, color) = content.split(Regex(" "), 2)
                 bag.children.add(Pair(count.toInt(), color))
             }

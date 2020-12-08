@@ -2,8 +2,8 @@ package d8
 
 fun main() {
     val instructions = FileReader.readFile("/d8/input").map {
-        val splitted = it.split(" ")
-        Pair(splitted[0], splitted[1].toInt())
+        val split = it.split(" ")
+        Pair(split[0], split[1].toInt())
     }
     val gameConsole = StateMachine(instructions)
     gameConsole.run()
