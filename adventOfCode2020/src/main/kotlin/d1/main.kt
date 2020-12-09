@@ -8,16 +8,16 @@ fun main() {
 
 fun findXNumberSumEqual2020(x: Int) {
 
-    val lines = FileReader.readFile("/d1/input").map(String::toInt)
+    val lines = FileReader.readFile("/d1/input").map(String::toDouble)
 
-    val result = findXNumberSumEqualY(x, 2020, mutableListOf(), lines, mutableListOf())
+    val result = findXNumberSumEqualY(x, 2020.0, mutableListOf(), lines, mutableListOf())
     val printedResult = result.first()
 
     println("Results : ${result.size}")
-    println(" ${printedResult.joinToString(" * ")} = ${printedResult.reduce { acc, i -> acc * i }}")
+    println(" ${printedResult.joinToString(" * ")} = ${printedResult.reduce { acc, i -> acc * i }.toBigDecimal().toPlainString()}")
 }
 
-fun findXNumberSumEqualY(x: Int, targetEqual: Int, combination: List<Int>, currentList: List<Int>, results: MutableList<List<Int>>): List<List<Int>> {
+fun findXNumberSumEqualY(x: Int, targetEqual: Double, combination: List<Double>, currentList: List<Double>, results: MutableList<List<Double>>): List<List<Double>> {
 
     currentList.forEachIndexed { index, item ->
 
